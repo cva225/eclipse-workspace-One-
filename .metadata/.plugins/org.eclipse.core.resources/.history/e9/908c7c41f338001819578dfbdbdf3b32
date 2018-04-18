@@ -1,0 +1,23 @@
+package com.cva.selenium;
+
+import java.util.logging.Logger;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import com.steadystate.css.dom.Property;
+
+import net.bytebuddy.implementation.FieldAccessor.PropertyConfigurable;
+
+public class Cva {
+
+	public static void main(String[] args) {
+		 
+	System.setProperty("webdriver.gecko.driver", "C:\\selenium\\geckodriver.exe ");
+	WebDriver driver=new FirefoxDriver();
+	driver.manage().window().maximize();
+	driver.get("https://en-gb.facebook.com/login/");
+
+	}
+
+}

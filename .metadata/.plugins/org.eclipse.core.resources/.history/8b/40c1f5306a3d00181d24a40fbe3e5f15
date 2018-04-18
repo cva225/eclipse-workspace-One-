@@ -1,0 +1,17 @@
+package com.Frameworkbasics2.Cva;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.Test;
+
+public class ChromeLaunch extends DriverEngine {
+	@Test
+	private void openChrome() {;
+		//DriverEngine de=new DriverEngine();
+		//de.getter();
+	WebDriver driver1= DriverEngine .getter();
+	    driver1.get("https://www.facebook.com/");
+		
+
+	}
+
+}

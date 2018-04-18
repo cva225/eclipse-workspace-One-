@@ -1,0 +1,52 @@
+package com.Practice.Cva;
+
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+public class Sample {
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "C:\\selenium\\chromedriver.exe");
+		RemoteWebDriver driver= new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		 driver.get("https://www.bing.co.in/");
+		String st=driver.getWindowHandle();
+		//System.out.println(st);
+		//driver.findElement(By.linkText("Images")).click();
+		//driver.findElement(By.linkText("Videos")).click();
+		//driver.findElement(By.id("scpl4")).click();
+		//driver.findElement(By.linkText("All")).click();
+		//driver.get("https://www.facebook.com/");
+		  Set<String> set= driver.getWindowHandles();
+		  System.out.println(set.size());
+		  System.out.println(set);
+		for (String child : set) {
+			driver.switchTo().window(child);
+			driver.findElement(By.linkText("Maps")).click();
+			driver.findElement(By.linkText("Directions")).click();
+			System.out.println("vcva");
+	Set<String>set1	=driver.getWindowHandles();
+	
+	System.out.println(set1);
+	//System.out.println(set1);
+			
+		}
+		
+		 driver.switchTo().window(st); 
+		 
+		
+		//st.get("https://www.bing.co.in/");
+		driver .findElement(By.linkText("Videos")).click();
+	
+	}
+	
+	
+	
+	
+}

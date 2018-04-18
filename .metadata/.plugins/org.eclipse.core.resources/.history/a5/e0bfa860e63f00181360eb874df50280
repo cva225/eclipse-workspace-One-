@@ -1,0 +1,10 @@
+package com.Config.OR.Properties;
+
+import java.io.File;
+
+public interface Sample4intf {
+	 String fileName1 = "C:\\Users\\HP\\eclipse-workspace\\FrameworkBasics\\src\\com\\Config\\OR\\Properties\\Config.properties";
+	
+	
+	
+}

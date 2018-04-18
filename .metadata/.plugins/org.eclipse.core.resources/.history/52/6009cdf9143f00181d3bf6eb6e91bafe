@@ -1,0 +1,52 @@
+package com.Practice.Cva;
+
+import java.util.List;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.testng.annotations.BeforeSuite;
+
+//**we are 100 windows, each window is having some elements but we dont know how maney 
+//**elements there ,get all the elements and pick up only checkboxes and do thids activity
+//**for each and every window
+
+public class PickUpCheckBoxes {
+	
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "C:\\selenium\\chromedriver.exe");
+		RemoteWebDriver driver= new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
+		driver.get("https://www.bing.co.in/");
+		driver.navigate().to("https://www.facebook.com/");
+		driver.navigate().to("https://twitter.com/login?lang=en");
+		driver.navigate().to("https://www.gmail.com/");
+		Set<String> allWindows=driver.getWindowHandles();
+		//System.out.println(driver.getCurrentUrl());
+       /// System.out.println(allWindows);
+		for (String windowName : allWindows) {
+			driver.switchTo().window(windowName);
+			List<WebElement> elements=driver.findElements(By.xpath("//*"));
+			  for (WebElement element : elements) {
+			    if (element.getAttribute("Type").equalsIgnoreCase("checkbox")) {
+					System.out.println("it is a checkbox:"+element);
+				}
+			}
+			
+		}
+		
+		
+	}
+
+
+
+	
+	
+	
+	
+}

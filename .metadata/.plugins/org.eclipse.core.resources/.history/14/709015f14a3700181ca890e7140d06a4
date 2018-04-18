@@ -1,0 +1,23 @@
+package com.cva.selenium;
+
+import java.awt.List;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.ListIterator;
+
+import com.google.common.graph.SuccessorsFunction;
+
+public class ListDemo {
+
+	public static void main(String[] args) {
+		LinkedList l=new LinkedList();
+		l.add(225);
+		l.add("siva");
+		l.add(19.5);
+		System.out.println(l);
+		l.set(0, "sivakumar");
+		System.out.println(l);
+		System.out.println(l.getFirst());
+	}
+
+}

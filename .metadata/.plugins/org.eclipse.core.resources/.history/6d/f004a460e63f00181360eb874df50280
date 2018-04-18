@@ -1,0 +1,5 @@
+package com.Config.OR.Properties;
+
+public interface Sample4intf {
+
+}

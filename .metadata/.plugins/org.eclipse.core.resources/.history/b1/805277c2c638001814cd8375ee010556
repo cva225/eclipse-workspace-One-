@@ -1,0 +1,97 @@
+package com.cva.selenium;
+
+import java.util.Iterator;
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class ExamplesImp2 {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.gecko.driver", "C:\\selenium\\geckodriver.exe ");
+		WebDriver driver=new FirefoxDriver();
+		
+		driver.get("https://www.adp.com/");
+		//List<WebElement> list2= driver.findElements(By.cssSelector("*[text()*='Sadp']"));// tect() not allowed in css selector	
+List<WebElement> list= driver.findElements(By.xpath("//*[contains(text(),'ADP')]"));
+			System.out.println(list.size()); //58
+             
+			
+//List<WebElement> list1= driver.findElements(By.xpath("//*[contains(text(),'adp')]"));
+	        //System.out.println(list1.size());//4
+ 
+		List<WebElement> list1= driver.findElements(By.xpath("//*[contains(text(),'adp')][contains(text(),'ADP')]"));	
+            System.out.println(list1.size());  //1 (both together)  
+	        
+	    List<WebElement> list3= driver.findElements(By.xpath("//*[contains(text(),'adp')and contains(text(),'ADP')]"));	
+	        System.out.println(list1.size());  //1 (both together)  
+	
+	    List<WebElement> list2= driver.findElements(By.xpath("//*[contains(text(),'adp')or contains(text(),'ADP')]"));	
+	        System.out.println(list1.size());  //1 (both together)  
+	
+	
+	int count=0;
+	      for(WebElement element:list) {
+	    	 System.out.println(element.getText());
+	    	  
+	    	           if (element.getTagName().equalsIgnoreCase("a")) {
+						System.out.println(" anchor "+element);
+					
+						
+						count++;
+					}
+	    	                 
+			}     
+	    	        	   
+	    	        	   
+	      System.out.println(count++);
+    	  	   
+						
+					}
+	    	  
+	    	  
+	    	  
+	    	  
+	    
+		
+	 /*  driver.get("https://www.facebook.com/");
+	
+		WebElement ele1= driver.findElement(By.cssSelector("*#day"));
+		Select slt=new Select(ele1);
+		List<WebElement> dayDD=slt.getOptions();
+		 int count1=0;
+		for (WebElement we : dayDD) {
+			if (we.getText().equalsIgnoreCase("25")) {
+			we.click();
+			}
+		
+		if (we.getTagName().equalsIgnoreCase("select")) {
+//System.out.println("op is :"+we);			
+		}
+		
+		System.out.println("op is :"+we);	
+		count1++;
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	    }
+	System.out.println(count1++);*/
+	}
+	
+	
+	
+	
+
+	

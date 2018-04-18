@@ -1,0 +1,36 @@
+package com.Practice.Cva;
+
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeSuite;
+
+public class PickUpCheckBoxes {
+	
+	@BeforeSuite
+	public  void openBrowser() {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\eclipse-workspace\\FrameworkBasics\\drivers\\chromedriver.exe");
+WebDriver driver=new ChromeDriver();
+driver.get("https://www.facebook.com/");
+driver.findElement(By.id("email"));
+driver.get("www.gmail.com/");
+driver.get("www.bing.com/");
+driver.get("www.adp.com/");
+driver.get("www.rameshsoft.com/");
+driver.get("www.youtube.com/");
+
+Set<String> windows=driver.getWindowHandles();
+System.out.println(windows);
+
+
+
+
+
+
+	}
+	
+
+}

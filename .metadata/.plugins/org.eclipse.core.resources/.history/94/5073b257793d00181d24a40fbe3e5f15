@@ -1,0 +1,69 @@
+package com.Frameworkbasics3.Cva;
+
+import java.lang.reflect.Method;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
+
+public class DynamicBtowserLaunching  {
+
+private static WebDriver driver;
+	
+	@Parameters({"Browser"})
+	@BeforeSuite
+	public  void openBrowser(@Optional("chrome")String BrowserName) {
+		if (BrowserName.equalsIgnoreCase("chrome")) {
+			System.setProperty(InterfacePOne.chromeKey, InterfacePOne.chromeValue+"\\chromedriver.exe");
+		driver =new ChromeDriver();
+		//manage();
+	        }
+		else if (BrowserName.equalsIgnoreCase("firefox")) {
+		System.setProperty(InterfacePOne.geckoKey, InterfacePOne.geckoValue+"\\geckodriver.exe");
+		driver=new FirefoxDriver();
+		//manage();
+		
+            }      
+		else if (BrowserName.equalsIgnoreCase("ie")) {
+		System.setProperty(InterfacePOne.ieKey, InterfacePOne.ieValue+"\\IEDriverServer.exe");;
+		driver=new InternetExplorerDriver();
+		//manage();
+		/*driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);*/
+		
+		}
+	}
+	
+	public  void manage() {
+		
+		driver.manage().window().maximize();
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+	}
+	
+	public static WebDriver  getter() {
+		return driver;
+
+	}
+	@AfterSuite
+	public  void close() {
+		driver.close();
+
+	}
+	/*public  void methodOne(Method method) {
+		String testCase=method.getName();
+		System.out.println(testCase);
+		
+
+	}*/
+
+}

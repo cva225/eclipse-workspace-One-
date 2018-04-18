@@ -1,0 +1,14 @@
+package com.Frameworkbasics2.Cva;
+
+import org.testng.annotations.Test;
+
+public class ChromeLaunch extends DriverEngine {
+	@Test
+	private void openChrome() {;
+		DriverEngine de=new DriverEngine();
+		de.getter();
+		
+
+	}
+
+}

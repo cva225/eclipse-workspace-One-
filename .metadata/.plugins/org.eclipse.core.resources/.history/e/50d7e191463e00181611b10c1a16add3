@@ -1,0 +1,11 @@
+package com.Frameworkbasics3.Cva;
+
+public interface BrowserKeyAndValue {
+	String ieKey="webdriver.ieKey.driver";
+	String ieValue=System.getProperty ("user dir");
+	String chromeKey="webdriver.chrome.driver";
+	String chromeValue=System.getProperty("user.dir");
+	String geckoKey="webdriver.gecko.driver";
+	String geckoValue=System.getProperty("user.dir");
+
+}

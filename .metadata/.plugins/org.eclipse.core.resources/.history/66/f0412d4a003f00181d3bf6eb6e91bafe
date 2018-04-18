@@ -1,0 +1,45 @@
+package com.Practice.Cva;
+
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeSuite;
+
+public class PickUpCheckBoxes {
+	
+public  void openBrowser() {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\eclipse-workspace\\FrameworkBasics\\drivers\\chromedriver.exe");
+WebDriver driver=new ChromeDriver();
+driver.manage().window().maximize();
+driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+driver.get("https://www.google.com/");
+
+WebDriver driver1= new ChromeDriver();
+
+//driver.findElement(By.id("email"));
+
+driver1.get("www.mail.com/");
+//driver.navigate().to("www.adp.com/");
+//driver.navigate().to("www.twitter.com/");
+//driver.navigate().to("www.youtube.com/");
+
+Set<String> windows=driver.getWindowHandles();
+System.out.println(windows);
+
+}
+	public static void main(String[] args) {
+		PickUpCheckBoxes obj=new PickUpCheckBoxes();
+		obj.openBrowser();
+		
+	}
+
+	
+	
+	
+	
+}

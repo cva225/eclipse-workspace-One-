@@ -1,0 +1,84 @@
+package com.cva.selenium;
+
+import java.util.ArrayList;
+
+public class Collectionintf {
+
+	public static void main(String[] args) {
+		//one
+				/*ArrayList list=new ArrayList();
+				list.add(10);
+				list.add("RAMAIAH");
+				list.add("LAKshmi");
+				list.add("HARIKUMAR");
+				list.add('S');
+				list.add(225);
+				list.add(91.77);
+				list.add(true);
+				System.out.println(list);
+				ArrayList list1=new ArrayList();
+				list1.addAll(list);
+				list1.add("mn");
+				System.out.println(list1);
+				*/
+				
+		//two
+				/*ArrayList list=new ArrayList();
+				list.add(225);
+				list.add("RAM");
+				list.contains(225);
+			System.out.println(list.contains(225));
+			System.out.println(list);
+			ArrayList list1=new ArrayList();
+				list1.containsAll(list);/one
+				/*ArrayList list=new ArrayList();
+				list.add(10);
+				list.add("RAMAIAH");
+				list.add("LAK//one
+				/*ArrayList list=new ArrayList();
+				listSHMI");
+				list.add("HARIKUMAR");
+				list.add('S');
+				list.add(225);
+				list.add(91.77);
+				list.add(true);
+				System.out.println(list);
+				ArrayList list1=new ArrayList();
+			
+				System.out.println(list1.containsAll(list));
+				
+				System.out.println(list1.containsAll(list));
+				*/
+				
+		//three		
+				/*ArrayList list=new ArrayList();
+				list.add(450);
+				list.add("ram");
+				list.add("lakki");
+				list.add(25.5);
+				list.isEmpty();
+				System.out.println(list.isEmpty());
+				System.out.println(list);
+				list.remove(0);
+				list.remove(25.5);
+				System.out.println(list);
+				list.removeAll(list);
+				System.out.println(list);
+				*/
+				
+		//four
+				ArrayList list=new ArrayList();
+				list.add(1000);
+				list.add("ram");
+				list.add(225.567);
+				list.add("hari");
+				System.out.println(list.size());
+				list.remove(2);
+				System.out.println(list);
+				list.removeAll(list);
+				System.out.println(list);
+				
+
+	}
+
+}

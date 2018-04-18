@@ -1,0 +1,12 @@
+package com.Config.OR.Properties;
+
+public class Sample3 extends Sample2  {
+
+	public static void main(String[] args) {
+		
+	}
+	
+
+	
+
+}

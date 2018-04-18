@@ -1,0 +1,10 @@
+package com.cva.selenium;
+
+public class ExamplesImp2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

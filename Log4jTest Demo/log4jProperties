@@ -1,0 +1,16 @@
+#Root logger option
+log4j.rootLogger=INFO,File,StdOut
+
+#Direct log message to a log file
+log4j.appernder.file=org.apache.log4j.RollingFileAppender
+log4j.appernder.file.File=C:\selenium\apache-log4j-1.2.17
+log4j.appernder.file.maxFileSize=60MB
+log4j.pernder.file.maxFleBackupIndex=10
+log4j.appernder.file.logout=org.apache.log4j.patternLayout
+log4j.appernder.file.conversionPattern=%d{YYYY-MM-DD HH:MM:SS}
+
+#direct log messages to StdOut
+log4j.appender.StdOut=
+log4j.appender.StdOut.target=
+log4j.appender.StdOut.layout=
+log4j.appender.StdOut.conversionPattern=%d{YYYY-MM-DD HH:MM:SS}

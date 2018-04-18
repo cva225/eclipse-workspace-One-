@@ -1,0 +1,28 @@
+package com.Config.OR.Properties;
+
+import java.io.FileInputStream;
+import java.util.Properties;
+
+import com.gargoylesoftware.htmlunit.javascript.host.file.File;
+
+public class Sample2 {
+	static  Properties prop = new Properties();
+	 String fileName;
+	 String value;
+	 
+	 public   Sample2(String  fileName1) {
+		fileName =fileName1; 
+
+	}
+	 
+	 public  String getproperty(String key) {
+		
+		FileInputStream fip = new FileInputStream(fileName);
+		prop.load(fop);
+		value= prop.getProperty(key);
+		return value;
+		
+
+	} 
+
+}

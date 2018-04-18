@@ -1,0 +1,13 @@
+package com.Frameworkbasics3.Cva;
+
+import org.testng.annotations.Test;
+
+public class TestOne extends DynamicBtowserLaunching{
+	@Test
+	public  void openChromeFB() {
+		getter().get("https://www.facebook.com/");
+		
+
+	}
+
+}

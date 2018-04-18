@@ -1,0 +1,26 @@
+package com.Config.OR.Properties;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
+//Program for Writing data to a property file
+
+public class Sample1 {
+	public static void main(String[] args) throws IOException  {
+		Properties  prop= new Properties();
+	  FileInputStream fip =new FileInputStream("C:\\Users\\HP\\eclipse-workspace\\FrameworkBasics\\src\\com\\Config\\OR\\Properties\\Config.properties");
+		prop.load(fip);
+		prop.setProperty("ram", "lakshmi");
+		prop.setProperty("hari", "siva");
+		
+		
+		
+	  
+	}
+	
+	
+	
+
+}

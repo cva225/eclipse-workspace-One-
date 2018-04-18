@@ -1,0 +1,23 @@
+package com.cva.selenium;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class ExamplesImp2 {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.gecko.driver", "C:\\selenium\\geckodriver.exe ");
+		WebDriver driver=new FirefoxDriver();
+		driver.get("https://www.adp.com/");
+		
+ List<WebElement> list= (List<WebElement>) driver.findElement(By.cssSelector("*[text*='Adp']"));
+ System.out.println(list.size());
+
+	}
+
+}

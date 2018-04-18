@@ -1,0 +1,31 @@
+package com.Frameworkbasics2.Cva;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
+import org.testng.annotations.Test;
+
+public class DriverEngine {
+	public static WebDriver driver;
+	
+	@Parameters()
+	@Test
+	public  void openBrowser(@Optional("Chrome")String BrowserName) {
+		if (BrowserName.equalsIgnoreCase("chrome")) {
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\eclipse-workspace\\FrameworkBasics\\drivers\\chromedriver.exe");
+		driver =new ChromeDriver();
+	        }
+		else if (BrowserName.equalsIgnoreCase("firefox")) {
+		System.setProperty("webdriver.gecko.driver", "");
+		}      
+
+	}
+	
+	
+	
+	
+	
+	
+
+}

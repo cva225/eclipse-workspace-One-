@@ -1,0 +1,12 @@
+package com.Frameworkbasics5.Cva;
+
+import java.io.File;
+
+public class TextFiles {
+	
+public  void m1() {
+	File f= new File(C:\Users\HP\eclipse-workspace\FrameworkBasics\src\com\Frameworkbasics5\Cva\TextFile1.java);
+
+}
+
+}

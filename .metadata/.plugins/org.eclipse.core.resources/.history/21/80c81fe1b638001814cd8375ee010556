@@ -1,0 +1,32 @@
+package com.cva.selenium;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class ExamplesImp2 {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.gecko.driver", "C:\\selenium\\geckodriver.exe ");
+		WebDriver driver=new FirefoxDriver();
+		driver.get("https://www.adp.com/");
+		
+		//List<WebElement> list2= driver.findElements(By.cssSelector("*[text()*='Sadp']"));// tect() not allowed in css selector	
+List<WebElement> list= driver.findElements(By.xpath("//*[contains(text(),'ADP')]"));
+			System.out.println(list.size()); //58
+List<WebElement> list1= driver.findElements(By.xpath("//*[contains(text(),'adp')]"));
+	        System.out.println(list1.size());//4
+ 
+		/*List<WebElement> list1= driver.findElements(By.xpath("//*[contains(text(),'adp')][contains(text(),'ADP')]"));	
+System.out.println(list1.size());  //1 (both together)  */
+	        
+	       
+	
+	
+	}
+
+}

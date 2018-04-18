@@ -1,0 +1,68 @@
+package com.selenium.basics;
+
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class WindowHandles {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "C:\\selenium\\chromedriver.exe ");
+      WebDriver driver= new ChromeDriver();
+      //driver.get("https://www.bing.com/");
+      driver.manage().deleteAllCookies();
+      driver.manage().timeouts().implicitlyWait(22, TimeUnit.SECONDS);
+      driver.get("https://www.facebook.com/");
+      driver.get("https://www.gmail.com/");
+    /*  String s=driver.getWindowHandle();
+      System.out.println(s);*/
+   Set<String >   set  =driver.getWindowHandles();
+   System.out.println();
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+     // String s= driver.getCurrentUrl();
+      //System.out.println(s);
+     // String m=driver.getPageSource();
+     // System.out.println(m);
+     
+      driver.navigate().to("https://www.bing.com/");
+      driver.navigate().to("https://www.bing.com/maps?FORM=Z9LH3");
+      driver.navigate().to("https://www.bing.com/news/search?FORM=NWRFSH");
+     // driver.switchTo().window("https://www.bing.com/maps?FORM=Z9LH3");
+    /*String d = driver.getWindowHandle();
+      System.out.println(d);*/
+      
+      
+      
+      
+      
+      
+	}
+
+}

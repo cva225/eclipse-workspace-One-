@@ -1,0 +1,30 @@
+package com.Practice.Cva;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Smaple {
+	
+
+	    public static void main(String[] args) {
+	        // TODO Auto-generated method stub
+	        WebDriver driver = new FirefoxDriver();
+
+	        driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+
+
+	        driver.get("http://www.google.com");
+
+	        driver.navigate().to("http://www.facebook.com");
+
+
+	        int n = driver.getWindowHandles().size();
+	        System.out.println(n);
+
+	    }
+
+	
+
+}
